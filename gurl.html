@@ -1,0 +1,160 @@
+<html lang="en"><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head>
+    <meta name="robots" content="noindex">
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="lO/ZYHfZ/kwpd+aQ/iqvGeo+MZIJvMhYNdSlQs6/HgSdCT+AH4ArseHvV62xZ1Y6GWA88XRD18nw7inDWhjyLg==">
+
+<meta charset="utf-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"67665f735d","applicationID":"269804378","transactionName":"d1kLQ0VYWlxQE04UFVFEOkVSUVNCRwANEklGUwFSUlo=","queueTime":0,"applicationTime":10,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"67665f735d",applicationID:"269804378"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<title>Ramsey+</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Start Your 30-Day Trial Now">
+<meta property="og:description" content="Stop living paycheck to paycheck. Ditch your payments and feel secure for your future. Start your 30-day trial now.">
+<meta property="og:url" content="https://www.ramseyplus.com">
+<meta property="og:image" content="https://cdn.ramseysolutions.net/media/ramsey-plus/referral/OG/opengraph5.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.ramseysolutions.net/media/ramsey-plus/referral/OG/opengraph5.png">
+<meta name="twitter:image:width" content="1200">
+<meta name="twitter:image:height" content="630">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://ajax.googleapis.com">
+<link rel="dns-prefetch" href="https://use.typekit.net">
+<link rel="preconnect" href="https://use.typekit.net">
+
+    
+<link rel="preload" href="https://cdn.optimizely.com/js/10439514611.js" as="script" type="text/javascript">
+<script>WebFontConfig = { typekit: { id: 'qfq3avj' } };</script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" async=""></script>
+
+<link rel="stylesheet" media="screen" href="https://cdn.ramseysolutions.net/ruby/ramsey-plus-web-app/assets/application-91a1fac80f65207342037216328993d3b86842fd46f6c349e8fad40d15fd5249.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cdn.ramseysolutions.net/ruby/ramsey-plus-web-app/assets/favicon-64880e28086c78400778c919c183d90b97a90540e9b2009afc5b4d3f51cdfbba.ico">
+
+<script src="https://cdn.optimizely.com/js/10439514611.js"></script>
+<script>
+//<![CDATA[
+
+  window.optimizely = window.optimizely || [];
+  window.optimizely.push({
+  "type": "waitForOriginSync",
+  "canonicalOrigins": [
+    "daveramsey.com",
+    "financialpeace.com",
+    "ramseysolutions.com",
+    "ramseyplus.com"
+  ]
+  });
+
+//]]>
+</script>
+
+
+    <script>window.gtmDataLayer = window.gtmDataLayer || []; </script>
+<script>(function(w,d,s,l,i){var q=(/(test|qa)/.test(document.location.hostname))?'&gtm_auth=QdsxPg__bulLcFg0npL1Xg&gtm_preview=env-5&gtm_cookies_win=x':'';w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+q;f.parentNode.insertBefore(j,f);})(window,document,'script','gtmDataLayer','GTM-5Z3Z28D');</script>
+  </head>
+  <body class="ReferralsTheme" style="">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z3Z28D" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+  <div class="AppNavigation-container">
+  <nav class="AppNavigation" role="navigation">
+    <ul class="AppNavigation-list">
+      <li class="AppNavigation-listItem AppNavigation-listItem--logo">
+        <a class="AppNavigation-item AppNavigation-item--logo" data-analytics-link-label="Ramsey+" href="/app/welcome">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 154 24" class="AppNavigation-item--logoFull"><defs><path d="M77.709.24c3.631 0 6.481.959 8.818 2.772l.134.106-3.01 4.232c-1.989-1.39-4.163-2.133-6.084-2.133-1.428 0-2.142.595-2.174 1.336l-.001.053v.066c0 .984.746 1.421 3.756 2.1 4.947 1.072 8.044 2.658 8.105 6.627l.001.121v.066c0 4.418-3.515 7.054-8.798 7.054-3.777.01-7.384-1.16-10.04-3.452l-.142-.124v-.001l3.35-3.993c2.142 1.696 4.536 2.604 7.051 2.604 1.58 0 2.445-.534 2.482-1.428l.001-.06v-.064c0-.897-.714-1.39-3.67-2.079-4.588-1.04-8.132-2.324-8.202-6.67l-.001-.132v-.066c0-4.024 3.196-6.935 8.424-6.935zM49.93.612L55.127 9l5.185-8.39h6.369V22.28h-5.997V9.832l-5.557 8.487h-.132L49.47 9.898v12.38h-3.712L43.56 17.16V.612h6.37zM33.621.459l9.259 21.82h-6.458l-1.582-3.872h-8.392L24.9 22.278h-1.778l-2.823-4.112L27.81.46h5.81zm79.29.153l4.47 7.897 4.504-7.897h6.744l-8.27 13.463v8.204h-6.052v-8.105L106.036.612h6.875zm-9.896 0l3.097 5.108H95.294V9h9.545v4.737h-9.545v3.434h11.104v5.107H89.33V.611h13.685zm-92.734 0c3.328 0 5.624.864 7.084 2.35 1.242 1.206 1.889 2.825 1.921 4.88l.002.164v.065c0 3.264-1.717 5.446-4.35 6.598l-.12.052 5.195 7.547h-6.965l-4.382-6.563H6.03v6.563H0V.612h10.281zm20.386 6.966l-2.45 6.159h4.876l-2.426-6.159zM9.973 5.808H6.03v5.194h3.977v.011c2.017 0 3.187-.96 3.228-2.487V8.378c0-1.696-1.24-2.57-3.262-2.57z" id="a"></path><path d="M14.732.191c.19-.087.333.016.43.307.097.291.226.26.388-.091.145.118.708 1.064.912 1.11.02.198.066.629.27.675.193.582.425 1.06.697 1.433.237.327-.437 3.84-.575 3.787.145.119 3.139.005 5.802.06 2.664.053 4.538.61 4.524.477.204.046-.167.62-.253.429-.15.188-.892.315-1.11.264l-.018-.005.004.003c.101.088.16.16.178.216l.004.023c.007.066 1.435.72 1.776.818-.096.345-.174.554-.056.408.03.288-.257.538-.442.659l-.002.001.011.001c.064.01.107.087.128.23l.005.045c-.328.034-11.279 1.154-11.79 1.341-.05.14-2.73 10.635-2.833 10.913-.131.014-.592.364-.854.392.024-.405-.022-.685-.138-.84-.116-.155-.397.16-.515.305-.138-.052-.257-.24-.315-.167-.204-.046-.805-1.356-.768-1.628-.176.22-.246.495-.211.826-.108-.39-.332-.635-.674-.733-.026-2.14.04-4.302.489-7.854-.007-.066-5.285.584-6.824 1.081-.028-.265.057-.408.253-.428L2.9 13.98c-.051.14-.286.125-.28.19-.448-.488-2.385-3.787-2.458-3.846-.01-.736 4.469-2.093 10.758-2.792.685-3.213 1.452-3.945 2.302-6.58.117-.146 1.373-.814 1.51-.762z" id="c"></path></defs><g fill="none" fill-rule="evenodd"><g transform="translate(0 .32)"><mask id="b" fill="#fff"><use xlink:href="#a"></use></mask><path fill="#FFF" class="AppNavigation-item--logo-fill" mask="url(#b)" d="M-1.597-1.36h131.823v25.6H-1.597z"></path></g><g transform="translate(125.87)"><mask id="d" fill="#fff"><use xlink:href="#c"></use></mask><path fill="currentColor" mask="url(#d)" d="M-2.489.377l30.541-3.215 2.744 26.147L.255 26.524z"></path></g></g></svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="23px" viewBox="0 0 34 23" version="1.1" class="AppNavigation-item--logoIcon">
+    <!-- Generator: sketchtool 64 (101010) - https://sketch.com -->
+    <title>A8667412-609C-4D9D-B0D4-E4AE50F22868</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M8.63076029,0.104343141 C8.74233238,0.0532868172 8.82658843,0.113258791 8.88352845,0.284260644 C8.94048428,0.455262496 9.01656766,0.437434357 9.11177858,0.230773066 C9.19706215,0.300471635 9.52825326,0.855621028 9.64799802,0.882364816 C9.66026495,0.999068147 9.68685382,1.25192325 9.80659859,1.27866862 C9.92049444,1.62067233 10.0571695,1.90128609 10.2166395,2.12050991 C10.3561757,2.31233076 9.96014062,4.37448743 9.87893549,4.34369049 C9.96421906,4.41338748 11.7244751,4.3464221 13.2909896,4.37836194 C14.8575041,4.41030178 15.9597092,4.73699238 15.9515207,4.65919069 C16.0712655,4.68593448 15.8533853,5.02348036 15.8025788,4.91083017 C15.7129659,5.02250712 15.2682054,5.09765886 15.1458653,5.06506794 L15.1395326,5.06295108 L15.1610604,5.08208744 C15.2093924,5.12656452 15.237833,5.16349588 15.2463823,5.19288261 L15.2488284,5.20501501 C15.2529068,5.24391507 16.09229,5.6276595 16.2932399,5.68520181 C16.2365686,5.88780995 16.1910103,6.01059142 16.2599327,5.92468502 C16.2769306,6.08636713 16.1234703,6.22783411 16.014869,6.30175765 L15.9988495,6.31240672 L16.0018525,6.31234185 C16.0419516,6.31613924 16.0682522,6.36177971 16.0807505,6.4492629 L16.0838169,6.47415938 C15.8910555,6.49441877 9.4508104,7.15165236 9.15055533,7.26186971 C9.12018838,7.34372297 7.54458434,13.5052829 7.48383462,13.668991 C7.40672373,13.6770957 7.135982,13.8825382 6.98177603,13.8987476 C6.99579763,13.6612894 6.96878194,13.4969743 6.90072897,13.4057991 C6.83267601,13.3146255 6.66693028,13.4992016 6.59800788,13.5851064 C6.51681855,13.5543095 6.44672637,13.4436859 6.41224936,13.4866391 C6.29250459,13.4598937 5.93883466,12.6907893 5.96102894,12.5311343 C5.85762953,12.6599923 5.81616543,12.8216738 5.83660504,13.0161789 C5.77351575,12.7868254 5.64150405,12.6433782 5.44056996,12.5858359 C5.42539439,11.328851 5.46390241,10.0598963 5.72772029,7.97446253 C5.72362604,7.93556089 2.6197468,8.31737045 1.71495059,8.60912245 C1.69858942,8.45351906 1.748242,8.36963923 1.86389253,8.35748455 L1.86389253,8.35748455 L1.67201636,8.20066395 C1.64163359,8.28251721 1.50356748,8.2735573 1.50766172,8.31245893 C1.24363834,8.02556311 0.104395307,6.08873772 0.0617339179,6.05388923 C0.0553276158,5.62192756 2.68969671,4.82531581 6.38863237,4.41441816 C6.79152807,2.52854318 7.24229006,2.09881675 7.74230943,0.551700111 C7.81123184,0.465793713 8.54957096,0.0735462093 8.63076029,0.104343141 Z" id="path-1"></path>
+        <path d="M10.1613624,0.110117763 C12.5435577,0.110117763 14.368389,0.396035074 15.1631781,0.746021763 C17.860608,1.90382326 18.6702407,4.98307381 18.6702407,6.72937144 C18.6702407,8.49050478 17.860608,11.5708556 15.1617301,12.7130926 C14.3839518,13.0467893 13.3850354,13.3489966 10.1628104,13.3489966 L10.1628104,13.3489966 L0.0361256925,13.3489966 L0.0361256925,0.110117763 L10.1613624,0.110117763 Z M9.17872583,4.31677124 L6.48057738,4.31677124 L6.48057738,9.07863418 L9.14652274,9.07863418 C10.210223,9.11048391 12.2576373,9.04678444 12.2576373,6.7453058 L12.2576373,6.7453058 L12.2576373,6.6816 C12.2576373,4.38047704 10.210223,4.31677124 9.14652274,4.31677124 L9.17872583,4.31677124 Z" id="path-3"></path>
+        <polygon id="path-5" points="6.9142131 0.086660435 11.5646099 7.64294783 4.43756091 7.64294783 0.02568466 0.086660435"></polygon>
+        <polygon id="path-7" points="0.0360894924 0.0879282278 6.4805411 0.0879282278 6.4805411 5.41981894 0.0360894924 5.41981894"></polygon>
+    </defs>
+    <g id="Desktop-and-SE-side-by-side" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-SE" transform="translate(-24.000000, -24.000000)">
+            <g id="Group">
+                <g id="Group-13" transform="translate(24.000000, 24.000000)">
+                    <g id="Group-3" transform="translate(17.072521, 7.113551)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Clip-2"></g>
+                        <polygon id="Fill-1" fill="currentColor" mask="url(#mask-2)" points="-1.33291024 0.346093206 16.3316847 -1.51052295 17.9140229 13.5444691 0.2494327 15.4010927"></polygon>
+                    </g>
+                    <g id="Group-6">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="Clip-5"></g>
+                        <polygon id="Fill-4" fill="#FFFFFF" class="AppNavigation-item--logo-fill" mask="url(#mask-4)" points="-0.754268898 -0.680276748 19.4606352 -0.680276748 19.4606352 14.1393911 -0.754268898 14.1393911"></polygon>
+                    </g>
+                    <g id="Group-9" transform="translate(9.168576, 15.017496)">
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <g id="Clip-8"></g>
+                        <polygon id="Fill-7" fill="#FFFFFF" class="AppNavigation-item--logo-fill" mask="url(#mask-6)" points="-0.764709851 -0.703734076 12.3550044 -0.703734076 12.3550044 8.43334234 -0.764709851 8.43334234"></polygon>
+                    </g>
+                    <g id="Group-12" transform="translate(0.000000, 15.017496)">
+                        <mask id="mask-8" fill="white">
+                            <use xlink:href="#path-7"></use>
+                        </mask>
+                        <g id="Clip-11"></g>
+                        <polygon id="Fill-10" fill="#FFFFFF" class="AppNavigation-item--logo-fill" mask="url(#mask-8)" points="-0.75430494 -0.702467864 7.27093554 -0.702467864 7.27093554 6.21021298 -0.75430494 6.21021298"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+
+</a>      </li>
+        <li class="AppNavigation-listItem AppNavigation-listItem--push">
+          <a class="gzl-Button gzl-Button--borderless Button--borderless SignInButton" href="https://www.qa.ramseyplus.com/app/auth/sign-in">Sign In</a>
+          <a class="gzl-Button Button--rounded Button--compact StartTrialButton" data-testid="StartTrial-nav" href="https://www.qa.ramseyplus.com/app/auth/sign-up?return_url=https%3A%2F%2Faccount.qa.ramseysolutions.com%2Fsubscriptions%2Fnew%3Fproduct%3Dramsey-plus%26trial%3DP14D%26client_id%3Dramseyplus%26success_url%3Dhttps%3A%2F%2Fwww.qa.ramseyplus.com%2Fonboarding">Start Free Trial</a>
+        </li>
+    </ul>
+  </nav>
+</div>
+
+  
+<script>
+  window.location.replace("https://www.qa.ramseyplus.com/user-referrals/new?code=s9fk68");
+</script>
+
+<div class="RedirectContainer">
+  <div class="RedirectContainer-titleContainer">
+    <h1 class="RedirectContainer-title">We're redirecting you.</h1>
+    <p class="RedirectContainer-contentBlock">
+      If that doesn't work, <a class="RedirectContainer-link" href="https://www.qa.ramseyplus.com/user-referrals/new?code=s9fk68">click here</a>.
+    </p>
+  </div>
+</div>
+
+  <footer class="AppFooter">
+  <div class="AppFooter-container">
+    <p class="AppFooter-referral">
+      <a class="AppFooter-link" href="https://www.qa.ramseyplus.com/referrals?campaign=footer">Share Ramsey+ With Your Friends</a>
+    </p>
+    <p class="AppFooter-copyright">
+      <a class="AppFooter-link" target="_blank" rel="noreferrer" href="https://policies.ramseysolutions.net/privacy-policy">Privacy Policy</a>
+      <span class="AppFooter-middot">·</span>
+      <a class="AppFooter-link" target="_blank" rel="noreferrer" href="https://policies.ramseysolutions.net/terms-of-use">Terms of Use</a>
+      <span class="AppFooter-middot">·</span>
+      <a class="AppFooter-link" href="/terms-of-service">Terms of Service</a>
+    </p>
+    <p class="AppFooter-copyright">Copyright © 2020 Lampo Licensing, LLC.</p>
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jwplayer.com/libraries/L1H1ocUG.js"></script>
+    <script src="https://cdn.ramseysolutions.net/ruby/ramsey-plus-web-app/assets/packs/js/application-f749ce1db27c79d290d8.js"></script>
+
+  
+
+
+</body></html>
